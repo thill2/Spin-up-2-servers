@@ -1,18 +1,17 @@
-// Require/import the HTTP module
+// Require/import the HTTP module.  (this is included in npm init)
 var http = require("http");
 
 // Define a port to listen for incoming requests
 var PORT1 = 7000;
 var PORT2 = 7050;
 
-// Create a generic function to handle requests and responses
+// Functions to handle requests and responses
 function handleRequest1(request, response) {
   // Send the below string to the client when the user visits the PORT URL
   response.end("Wow you're so special!");
 }
 
 function handleRequest2(request, response) {
-  // Send the below string to the client when the user visits the PORT URL
   response.end("I mean, you could be better.");
 }
 
@@ -28,6 +27,5 @@ server1.listen(PORT1, function() {
 });
 
 server2.listen(PORT2, function() {
-  // Log (server-side) when our server has started
   console.log("Server listening on: http://localhost:" + PORT2);
 });
